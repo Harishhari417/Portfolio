@@ -29,13 +29,23 @@ export default function App() {
       <Background />
       <Navbar dark={dark} setDark={setDark} />
       <main className="max-w-6xl mx-auto px-6 py-12 space-y-20">
-        <Hero />
-        <About dark={dark}/>
-        
+  <section id="home" className="scroll-mt-24">
+    <Hero />
+  </section>
 
-        <Projects />
-        <Contact />
-      </main>
+  <section id="about" className="scroll-mt-24">
+    <About dark={dark} />
+  </section>
+
+  <section id="projects" className="scroll-mt-24">
+    <Projects />
+  </section>
+
+  <section id="contact" className="scroll-mt-24">
+    <Contact />
+  </section>
+</main>
+
       <Footer />
     </div>
   )
