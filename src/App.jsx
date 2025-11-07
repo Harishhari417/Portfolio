@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react'
+import Background from './components/Background'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
+import TechnicalSkills from './components/TechnicalSkills'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import Background from './components/Background'
+
 
 export default function App() {
   const [dark, setDark] = useState(() => {
@@ -29,6 +31,8 @@ export default function App() {
       <main className="max-w-6xl mx-auto px-6 py-12 space-y-20">
         <Hero />
         <About />
+        <TechnicalSkills dark={dark} />
+
         <Projects />
         <Contact />
       </main>
