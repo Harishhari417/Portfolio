@@ -3,7 +3,7 @@ import Background from './components/Background'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
-import TechnicalSkills from './components/TechnicalSkills'
+//import TechnicalSkills from './components/TechnicalSkills'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -30,8 +30,8 @@ export default function App() {
       <Navbar dark={dark} setDark={setDark} />
       <main className="max-w-6xl mx-auto px-6 py-12 space-y-20">
         <Hero />
-        <About />
-        <TechnicalSkills dark={dark} />
+        <About dark={dark}/>
+        
 
         <Projects />
         <Contact />
