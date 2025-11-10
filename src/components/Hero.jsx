@@ -4,36 +4,39 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section
-      id="home"
-      className="relative flex flex-col items-center justify-center min-h-[80vh] sm:min-h-[90vh] px-6 text-center overflow-hidden 
-      bg-gray-50 dark:bg-[#0d1117] transition-colors duration-700"
-    >
-      {/* ✅ Gradient overlay for subtle color depth */}
+  <section
+  id="home"
+  className="relative flex flex-col items-center justify-center min-h-[80vh] sm:min-h-[90vh] px-6 text-center overflow-hidden
+  bg-gradient-to-b from-gray-100 via-gray-50 to-gray-100 
+  dark:from-[#0f172a] dark:via-[#1e293b] dark:to-[#0f172a] transition-colors duration-700"
+>
+
+
+      {/* 🎨 Gradient overlay (slightly stronger in dark mode) */}
       <div
         className="absolute inset-0 
         bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 
-        dark:from-[#1a1f29] dark:via-[#171b22] dark:to-[#13161c]
-        opacity-30 blur-3xl transition-colors duration-700"
+        dark:from-[#1f2531] dark:via-[#191e26] dark:to-[#141820]
+        opacity-30 dark:opacity-45 blur-3xl transition-colors duration-700"
       ></div>
 
-      {/* Floating Blobs - lighter on mobile for better text contrast */}
+      {/* ✨ Floating Blobs — adaptive opacity for all screen sizes */}
       <motion.div
         className="absolute w-60 h-60 sm:w-80 sm:h-80 md:w-96 md:h-96 
         bg-indigo-400 dark:bg-indigo-600 rounded-full mix-blend-multiply filter blur-3xl 
         opacity-15 sm:opacity-25 md:opacity-30"
         animate={{ x: [0, 40, -40, 0], y: [0, -30, 30, 0] }}
-        transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}
+        transition={{ repeat: Infinity, duration: 10, ease: 'easeInOut' }}
       />
       <motion.div
         className="absolute w-60 h-60 sm:w-80 sm:h-80 md:w-96 md:h-96 
         bg-pink-400 dark:bg-pink-700 rounded-full mix-blend-multiply filter blur-3xl 
         opacity-15 sm:opacity-25 md:opacity-30"
         animate={{ x: [0, -50, 50, 0], y: [0, 40, -40, 0] }}
-        transition={{ repeat: Infinity, duration: 12, ease: "easeInOut" }}
+        transition={{ repeat: Infinity, duration: 12, ease: 'easeInOut' }}
       />
 
-      {/* Main Content */}
+      {/* 🧠 Main Content */}
       <motion.div
         className="relative z-10 max-w-3xl mx-auto"
         initial={{ opacity: 0, y: 30 }}
@@ -41,6 +44,7 @@ export default function Hero() {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
+        {/* Heading */}
         <h1
           className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 
           text-gray-900 dark:text-gray-100 tracking-tight leading-tight transition-colors duration-300"
@@ -56,6 +60,7 @@ export default function Hero() {
           </span>
         </h1>
 
+        {/* Subtitle */}
         <p
           className="text-base sm:text-lg md:text-xl 
           text-gray-800 dark:text-gray-300 leading-relaxed mb-8 font-medium transition-colors duration-300"
