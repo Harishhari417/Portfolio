@@ -9,13 +9,14 @@ export default function Navbar({ dark, setDark }) {
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-indigo-500 shadow-md">
+     <div className="w-11 h-11 rounded-full overflow-hidden border-2 border-indigo-500 shadow-md hover:scale-105 transition-transform duration-300">
   <img
     src="/profile.jpg"
     alt="Harish Logo"
     className="w-full h-full object-cover"
   />
 </div>
+
 
           <div>
             <h1 className="text-lg font-semibold">Harish M</h1>
