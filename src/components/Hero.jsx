@@ -6,22 +6,34 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex flex-col items-center justify-center min-h-[80vh] sm:min-h-[90vh] px-6 text-center overflow-hidden"
+      className="relative flex flex-col items-center justify-center min-h-[80vh] sm:min-h-[90vh] px-6 text-center overflow-hidden 
+      bg-gray-50 dark:bg-[#0d1117] transition-colors duration-700"
     >
-      {/* ✅ SAME BACKGROUND */}
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 opacity-10 blur-3xl"></div>
+      {/* ✅ Gradient overlay for subtle color depth */}
+      <div
+        className="absolute inset-0 
+        bg-gradient-to-br from-indigo-200 via-purple-200 to-pink-200 
+        dark:from-[#1a1f29] dark:via-[#171b22] dark:to-[#13161c]
+        opacity-30 blur-3xl transition-colors duration-700"
+      ></div>
 
+      {/* Floating Blobs - lighter on mobile for better text contrast */}
       <motion.div
-        className="absolute w-72 h-72 sm:w-96 sm:h-96 bg-indigo-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30"
+        className="absolute w-60 h-60 sm:w-80 sm:h-80 md:w-96 md:h-96 
+        bg-indigo-400 dark:bg-indigo-600 rounded-full mix-blend-multiply filter blur-3xl 
+        opacity-15 sm:opacity-25 md:opacity-30"
         animate={{ x: [0, 40, -40, 0], y: [0, -30, 30, 0] }}
         transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute w-72 h-72 sm:w-96 sm:h-96 bg-pink-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30"
+        className="absolute w-60 h-60 sm:w-80 sm:h-80 md:w-96 md:h-96 
+        bg-pink-400 dark:bg-pink-700 rounded-full mix-blend-multiply filter blur-3xl 
+        opacity-15 sm:opacity-25 md:opacity-30"
         animate={{ x: [0, -50, 50, 0], y: [0, 40, -40, 0] }}
         transition={{ repeat: Infinity, duration: 12, ease: "easeInOut" }}
       />
 
+      {/* Main Content */}
       <motion.div
         className="relative z-10 max-w-3xl mx-auto"
         initial={{ opacity: 0, y: 30 }}
@@ -31,24 +43,22 @@ export default function Hero() {
       >
         <h1
           className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 
-          dark:text-white tracking-tight leading-tight transition-colors duration-300"
+          text-gray-900 dark:text-gray-100 tracking-tight leading-tight transition-colors duration-300"
         >
           Hi, I’m{" "}
           <span
             className="text-indigo-600 dark:text-indigo-400 
-            drop-shadow-[0_0_10px_rgba(99,102,241,0.5)] 
-            dark:drop-shadow-[0_0_12px_rgba(129,140,248,0.8)] 
+            drop-shadow-[0_0_10px_rgba(99,102,241,0.4)] 
+            dark:drop-shadow-[0_0_12px_rgba(129,140,248,0.6)] 
             transition-all duration-300"
           >
             Harish
           </span>
         </h1>
 
-        {/* ✅ FIXED PARAGRAPH COLOR */}
         <p
           className="text-base sm:text-lg md:text-xl 
-          text-gray-900 dark:text-white
-          leading-relaxed mb-8 font-medium transition-colors duration-300"
+          text-gray-800 dark:text-gray-300 leading-relaxed mb-8 font-medium transition-colors duration-300"
         >
           A passionate{" "}
           <strong className="text-indigo-600 dark:text-indigo-400">
@@ -79,14 +89,14 @@ export default function Hero() {
             className="px-6 py-3 w-full sm:w-auto text-center rounded-lg 
             border border-gray-400 dark:border-gray-600 
             text-gray-800 dark:text-gray-200 font-semibold
-            hover:bg-gray-100 dark:hover:bg-gray-800
+            hover:bg-gray-100 dark:hover:bg-[#1f2630]
             active:scale-95 transition-all duration-200"
           >
             Download Resume
           </a>
         </div>
 
-        {/* Icons */}
+        {/* Social Icons */}
         <div className="flex justify-center gap-6 mt-2">
           <a
             href="https://github.com/Harishhari417"
