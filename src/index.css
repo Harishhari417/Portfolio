@@ -42,3 +42,8 @@ html {
   background-size: 200% 200%;
   animation: gradientShift 6s ease infinite;
 }
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+}
