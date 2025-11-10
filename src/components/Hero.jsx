@@ -8,7 +8,7 @@ export default function Hero() {
       id="home"
       className="relative flex flex-col items-center justify-center min-h-[80vh] sm:min-h-[90vh] px-6 text-center overflow-hidden"
     >
-      {/* ✅ KEEP YOUR SAME BACKGROUND */}
+      {/* ✅ SAME BACKGROUND */}
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 opacity-10 blur-3xl"></div>
 
       <motion.div
@@ -22,7 +22,6 @@ export default function Hero() {
         transition={{ repeat: Infinity, duration: 12, ease: "easeInOut" }}
       />
 
-      {/* ✅ TEXT + BUTTONS UPDATED */}
       <motion.div
         className="relative z-10 max-w-3xl mx-auto"
         initial={{ opacity: 0, y: 30 }}
@@ -30,22 +29,27 @@ export default function Hero() {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        {/* ✅ CLEANER, SHARPER TEXT */}
-       <h1
-  className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 
-   dark:text-white tracking-tight leading-tight transition-colors duration-300"
->
-  Hi, I’m{" "}
-  <span
-    className="text-indigo-600 dark:text-indigo-400 drop-shadow-[0_0_10px_rgba(99,102,241,0.5)] dark:drop-shadow-[0_0_12px_rgba(129,140,248,0.8)] transition-all duration-300"
-  >
-    Harish
-  </span>
-</h1>
+        <h1
+          className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 
+          dark:text-white tracking-tight leading-tight transition-colors duration-300"
+        >
+          Hi, I’m{" "}
+          <span
+            className="text-indigo-600 dark:text-indigo-400 
+            drop-shadow-[0_0_10px_rgba(99,102,241,0.5)] 
+            dark:drop-shadow-[0_0_12px_rgba(129,140,248,0.8)] 
+            transition-all duration-300"
+          >
+            Harish
+          </span>
+        </h1>
 
-
-        <p className="text-base sm:text-lg md:text-xl  dark:text-gray-200 
-  leading-relaxed mb-8 font-medium transition-colors duration-300">
+        {/* ✅ FIXED PARAGRAPH COLOR */}
+        <p
+          className="text-base sm:text-lg md:text-xl 
+          text-gray-900 dark:text-white
+          leading-relaxed mb-8 font-medium transition-colors duration-300"
+        >
           A passionate{" "}
           <strong className="text-indigo-600 dark:text-indigo-400">
             Software Developer
@@ -56,11 +60,8 @@ export default function Hero() {
           <span className="font-semibold">Python</span>.
         </p>
 
-
-
-        {/* ✅ BUTTONS IMPROVED */}
+        {/* Buttons */}
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-10">
-          {/* Primary Button */}
           <a
             href="#projects"
             className="px-6 py-3 w-full sm:w-auto text-center rounded-lg 
@@ -71,7 +72,6 @@ export default function Hero() {
             View My Work
           </a>
 
-          {/* Secondary Button */}
           <a
             href="/Harish_M_BE_CSE_2024.pdf"
             target="_blank"
@@ -86,7 +86,7 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* ✅ ICONS WITH CLEANER HOVER EFFECT */}
+        {/* Icons */}
         <div className="flex justify-center gap-6 mt-2">
           <a
             href="https://github.com/Harishhari417"
